@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+    <xs:element name="request_detail">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="client_info">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element type="xs:string" name="ip-address"/>
+                <xs:element type="xs:string" name="user-agent"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="parameters">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="numeric_parameters">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="parameter" maxOccurs="unbounded" minOccurs="0">
+                        <xs:complexType>
+                          <xs:simpleContent>
+                            <xs:extension base="xs:float">
+                              <xs:attribute type="xs:string" name="name" use="optional"/>
+                            </xs:extension>
+                          </xs:simpleContent>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="string_parameters">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="parameter" maxOccurs="unbounded" minOccurs="0">
+                        <xs:complexType>
+                          <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                              <xs:attribute type="xs:string" name="name" use="optional"/>
+                            </xs:extension>
+                          </xs:simpleContent>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute type="xs:string" name="method"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>

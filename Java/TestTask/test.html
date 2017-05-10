@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>TestTask Form</title>
+ </head>
+ <body>
+
+ <form action="http://localhost:82/testtask/xmlresource/" method="get">
+  <p><b>Выберете значение поля answer для GET</b></p>
+  <p><input type="radio" name="answer_g" value="a1">a1<Br>
+  <input type="radio" name="answer_g" value="a2">a2<Br>
+  <input type="radio" name="answer_g" value="a3">a3</p>
+  <p><input type="submit"></p>
+  <input type="hidden" name="answer_hidden" value="c100">
+  <input type="hidden" name="answer_hidden" value="c200">
+  <input type="hidden" name="answer_num" value="100">
+  <input type="hidden" name="answer_num" value="1.1">
+  <input type="hidden" name="answer_num" value="2,2">
+  <input type="hidden" name="answer_num" value="3123312167.3">
+  <input type="hidden" name="answer_num" value="3,3234234234">
+  <input type="hidden" name="answer_num" value="3,3234234233234234">
+ </form>
+
+ <form action="http://localhost:82/testtask/xmlresource/" method="post">
+  <p><b>Выберете значение поля answer для POST</b></p>
+  <p><input type="radio" name="answer_p" value="b1">b1<Br>
+  <input type="radio" name="answer_p" value="b2">b2<Br>
+  <input type="radio" name="answer_p" value="b3">b3</p>
+  <p><input type="submit"></p>
+  <input type="hidden" name="answer_hidden" value="d100">
+  <input type="hidden" name="answer_hidden" value="d200">
+  <input type="hidden" name="answer_num" value="100">
+  <input type="hidden" name="answer_num" value="1.1">
+  <input type="hidden" name="answer_num" value="2,2">
+  <input type="hidden" name="answer_num" value="3123312167.3">
+  <input type="hidden" name="answer_num" value="3,3234234234">
+  <input type="hidden" name="answer_num" value="3,3234234233234234">
+ </form>
+
+
+ </body>
+</html>
